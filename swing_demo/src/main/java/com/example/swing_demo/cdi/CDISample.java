@@ -3,10 +3,13 @@ package com.example.swing_demo.cdi;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-@Named
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class CDISample {
  
-	@Inject
+	@Autowired
 	CdiObjectDAO cdiObjectDAO;
 
 	public CdiObjectDAO getCdi() {
